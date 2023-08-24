@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 3.10)
+set(GP "global_project")
+set(DeployP "{{cookiecutter.Project_Name}}")
+set(TestP "test")
+set(LibP "lib") 
+SET(CMAKE_CXX_FLAGS "-std=c++17")
+SET(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} ${GCC_COVERAGE_COMPILE_FLAGS}")
+
+project(${GP})
+add_subdirectory(${DeployP})
+add_subdirectory(${TestP})
+add_subdirectory(${LibP})
